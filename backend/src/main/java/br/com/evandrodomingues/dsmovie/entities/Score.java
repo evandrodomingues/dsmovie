@@ -7,26 +7,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_score")
 public class Score {
-
 	@EmbeddedId
 	private ScorePK id = new ScorePK();
 	
 	private Double value;
 	
 	public Score() {
+		
 	}
 	
 	public void setMovie(Movie movie) {
 		id.setMovie(movie);
 	}
-
+	
 	public void setUser(User user) {
 		id.setUser(user);
-	}
-
-	public Score(ScorePK id, Double value) {
-		this.id = id;
-		this.value = value;
 	}
 
 	public ScorePK getId() {
@@ -44,10 +39,6 @@ public class Score {
 	public void setValue(Double value) {
 		this.value = value;
 	}
-
-	@Override
-	public String toString() {
-		return "Score [id=" + id + ", value=" + value + "]";
-	}
+	
 	
 }

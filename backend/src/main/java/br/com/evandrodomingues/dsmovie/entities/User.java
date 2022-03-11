@@ -1,5 +1,4 @@
 package br.com.evandrodomingues.dsmovie.entities;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +15,7 @@ public class User {
 	private String email;
 	
 	public User() {
+		
 	}
 
 	public User(Long id, String email) {
@@ -38,10 +38,6 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", email=" + email + "]";
-	}
-
+	
+	
 }
